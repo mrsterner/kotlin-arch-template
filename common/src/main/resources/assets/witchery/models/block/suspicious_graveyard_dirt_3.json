@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "witchery:block/suspicious_graveyard_dirt_3"
-  }
-}

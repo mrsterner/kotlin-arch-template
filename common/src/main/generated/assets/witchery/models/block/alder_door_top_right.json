@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_right",
-  "textures": {
-    "bottom": "witchery:block/alder_door_bottom",
-    "top": "witchery:block/alder_door_top"
-  }
-}

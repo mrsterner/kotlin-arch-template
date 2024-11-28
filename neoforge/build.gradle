@@ -44,15 +44,6 @@ dependencies {
     compileOnly "dev.emi:emi-neoforge:${emi_version}:api"
     runtimeOnly "dev.emi:emi-neoforge:${emi_version}"
 
-    implementation ("com.klikli_dev:modonomicon-${minecraft_version}-neoforge:${modonomicon_version}"){
-        transitive = false
-    }
-
-    compileOnly "mcp.mobius.waila:wthit:neo-${wthitVersion}"
-
-    compileOnly("io.wispforest:accessories-neoforge:${project.accessories_version}")
-
-
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')
 }

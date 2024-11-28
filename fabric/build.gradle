@@ -38,10 +38,6 @@ loom {
 }
 
 repositories {
-    maven { // Fabric ASM
-        name = "Jitpack"
-        url 'https://jitpack.io/'
-    }
     maven{
         url = "https://api.modrinth.com/maven"
     }
@@ -56,31 +52,8 @@ dependencies {
 
     modImplementation "dev.architectury:architectury-fabric:$rootProject.architectury_api_version"
 
-    include(modImplementation 'com.github.Chocohead:Fabric-ASM:v2.3')
-
     modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
     modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
-
-    //modLocalRuntime "maven.modrinth:sodium:mc1.21-0.6.0-beta.2-fabric"
-
-    //Stupid modonomicon
-    runtimeOnly "org.commonmark:commonmark:${commonmark_version}"
-    runtimeOnly "org.commonmark:commonmark-ext-gfm-strikethrough:${commonmark_version}"
-    runtimeOnly "org.commonmark:commonmark-ext-ins:${commonmark_version}"
-    runtimeOnly "me.zeroeightsix:fiber:${fiber_version}"
-
-    modImplementation("io.wispforest:accessories-fabric:${project.accessories_version}")
-
-    modImplementation ("com.klikli_dev:modonomicon-${minecraft_version}-fabric:${modonomicon_version}"){
-        transitive = false
-    }
-
-    modImplementation("com.terraformersmc:modmenu:11.0.2")
-
-    modCompileOnly "mcp.mobius.waila:wthit-api:fabric-${wthitVersion}"
-
-    modRuntimeOnly "mcp.mobius.waila:wthit:fabric-${wthitVersion}"
-    modRuntimeOnly "lol.bai:badpackets:fabric-${badpacketsVersion}"
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')

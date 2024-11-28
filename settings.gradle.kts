@@ -17,4 +17,4 @@ gradleEnterprise.buildScan {
 
 include("common", "fabric", "neoforge")
 
-rootProject.name = "witchery"
+rootProject.name = "modid"

@@ -3,7 +3,7 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = file("src/main/resources/witchery.accesswidener")
+    accessWidenerPath = file("src/main/resources/modid.accesswidener")
 }
 
 dependencies {
@@ -16,20 +16,12 @@ dependencies {
     modImplementation "dev.architectury:architectury:$rootProject.architectury_api_version"
 
     modCompileOnly "dev.emi:emi-xplat-intermediary:${emi_version}:api"
-
-    compileOnly ("com.klikli_dev:modonomicon-${minecraft_version}-common:${modonomicon_version}"){
-        transitive = false
-    }
-
-    modCompileOnly "mcp.mobius.waila:wthit-api:fabric-${wthitVersion}"
-
-    modImplementation("io.wispforest:accessories-common:${project.accessories_version}")
 }
 
 sourceSets {
     main {
         resources.srcDir 'src/main/generated'
-        resources.srcDir 'src/main/resources/witchery'
+        resources.srcDir 'src/main/resources/modid'
         // optional: exclude the datagen cache files from the mod jar
         resources.exclude '.cache'
     }

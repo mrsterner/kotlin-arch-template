@@ -1,13 +1,11 @@
 {
   "schemaVersion": 1,
-  "id": "witchery",
+  "id": "modid",
   "version": "${version}",
-  "name": "Witchery",
-  "description": "Witchery",
+  "name": "Mod",
+  "description": "Mod",
   "authors": [
-    "MrSterner",
-    "TechTastic",
-    "anatevka"
+    "MrSterner"
   ],
   "contact": {
     "homepage": "",
@@ -16,46 +14,28 @@
   "license": "ARR",
   "icon": "assets/logo.png",
   "environment": "*",
-  "accessWidener": "witchery.accesswidener",
+  "accessWidener": "modid.accesswidener",
   "entrypoints": {
     "main": [
-      "dev.sterner.witchery.fabric.WitcheryFabric"
+      "dev.sterner.modid.fabric.ModFabric"
     ],
     "client": [
-      "dev.sterner.witchery.fabric.WitcheryFabric"
+      "dev.sterner.modid.fabric.ModFabric"
     ],
     "fabric-datagen": [
-      "dev.sterner.witchery.fabric.datagen.WitcheryDatagen"
+      "dev.sterner.modid.fabric.datagen.ModDatagen"
     ],
     "emi": [
-      "dev.sterner.witchery.integration.emi.WitcheryEmiPlugin"
-    ],
-    "mm:early_risers": [
-      {
-        "adapter": "kotlin",
-        "value": "dev.sterner.witchery.fabric.asm.EarlyRiser"
-      }
+      "dev.sterner.modid.integration.emi.ModEmiPlugin"
     ]
   },
   "mixins": [
-    "witchery.mixins.json",
-    "witchery-common.mixins.json"
+    "modid.mixins.json",
+    "modid-common.mixins.json"
   ],
-  "custom": {
-    "modmenu": {
-      "parent": {
-        "id": "witchery",
-        "name": "Witchery",
-        "description": "wicthing",
-        "icon": "icon.png"
-      },
-      "update_checker": true
-    }
-  },
   "depends": {
     "fabric": "*",
-    "minecraft": ">=1.21.1",
-    "architectury": "*",
-    "modonomicon": "*"
+    "minecraft": "1.21.1",
+    "architectury": "*"
   }
 }

@@ -1,6 +1,0 @@
-{
-	"parent": "witchery:block/candelabra/iron_candelabra",
-	"textures": {
-		"candle": "minecraft:block/magenta_candle_lit"
-	}
-}
